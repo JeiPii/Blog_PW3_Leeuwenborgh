@@ -1,0 +1,176 @@
+
+body{
+  background-color: white;
+  font-size: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 0px;
+  margin: 0px;
+  color: #fff;
+}
+input {
+  width: 100%;
+  padding: 7px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 2px solid #fff !important;
+  border-radius: 25px;
+  outline: none !important;
+  -webkit-appearance: none !important;  
+  -moz-appearance: none !important;
+  appearance: none !important
+}
+body {
+  background-color: #2a1c3a;
+}
+h1{
+  text-align: center;
+}
+select{
+  width: 100%;
+  padding: 7px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 2px solid white;
+  border-radius: 25px;
+  outline: none !important;
+  -webkit-appearance: none !important;  
+  -moz-appearance: none !important;
+  appearance: none !important
+}
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button, 
+input[type=number]{ 
+  -webkit-appearance: none !important;  
+  -moz-appearance: none !important;
+  appearance: none !important;
+  outline: none !important;
+  list-style: none!important;
+  margin: 0; 
+}
+input[type=number]:hover,
+input[type=number]:focus,
+input[type=number]{
+  -moz-appearance:textfield; /* Firefox */
+  -moz-appearance:none;
+  list-style: none!important;
+}
+#formInput td, #formInput th {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+#formInput th{
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: rgb(115, 28, 196);
+  color: white;
+}
+button#addPost{
+  display:block;
+  margin-left: auto!important;
+  margin-right: auto!important;
+  position: relative!important;
+  text-align:center;
+  background-color: rgb(115, 28, 196);
+  color: white;
+  width: 15%;
+  border: 2px solid transparent !important;
+  border-radius: 25px;
+  padding: 7px 20px;
+  box-sizing: border-box;
+}
+button#addPost:hover {
+  width: 15%;
+  cursor: pointer;
+  background-color: rgb(115, 28, 196);
+  border: 2px solid #fff !important;
+  background-color: transparent !important;
+  color: #fff !important;
+}
+#customerFormComplete {
+  display: none;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  top: 25px;
+  width: 284px;
+  color: rgb(255, 255, 255);
+  background: -webkit-linear-gradient(50deg,#ff6ec4,#7873f5) !important;
+  background: -o-linear-gradient(50deg,#ff6ec4,#7873f5) !important;
+  background: linear-gradient(40deg,#ff6ec4,#7873f5) !important;
+}
+#send {
+  background-color: rgb(115, 28, 196);
+  color: white;
+  width: 100%;
+  border: 2px solid transparent !important;
+  /* height: 40px; */
+}
+#send[type=submit]:hover {
+  width: 100%;
+  cursor: pointer;
+  background-color: whitesmoke;
+  border: 2px solid #fff !important;
+  background-color: transparent !important;
+  color: #fff !important;
+}
+form#formInput li {
+  list-style-type: none;
+  padding: 5px;
+  margin: 0;
+}
+form#formInput label{
+  display: inline-block;
+  line-height: 1.8;
+  vertical-align: top;
+  width: 120px; /* Width of labels */
+}
+form#formInput ol{
+  margin: 0;
+  padding: 0;
+}
+
+#BlogTable{
+  display: block;
+  overflow: none;
+  font-size: 150%;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  border: 2px solid #fff !important;
+  top: 25px;
+  width: 37%;
+  color: rgb(255, 255, 255);
+  /* box-sizing: border-box; */
+}
+.BlogPostz{
+  margin: 0;
+  padding: 0;
+  position: relative;
+  display: block;
+}
+tr{
+  overflow: none;
+  text-align: inherit;
+}
+tr.BID{
+  float: right;
+  display: block;
+  border: 2px solid #fff !important;
+}
+tr.Buser, tr.Btitle, tr.Btype, tr.Btags, tr.Bdate{
+  /* border: 2px solid #fff !important; */
+  float: left;
+  text-align: left;
+}
+tr.Btitle{
+  float: left!important;
+  font-size: 150%;
+  padding-top: 22px;
+  margin-left: -84px;
+}
+tr.Bdate{
+  width: inherit;
+  padding-right: 10%;
+}
