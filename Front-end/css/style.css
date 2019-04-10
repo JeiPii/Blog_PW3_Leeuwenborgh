@@ -132,40 +132,45 @@ form#formInput ol{
 }
 
 #BlogTable{
+  display: block;
+  overflow: none;
   font-size: 150%;
-  display:block;
   margin-left: auto;
   margin-right: auto;
   position: relative;
   border: 2px solid #fff !important;
   top: 25px;
-  width: 60%;
+  width: 37%;
   color: rgb(255, 255, 255);
-  box-sizing: border-box;
-  position: relative;
-  vertical-align:middle;
-}
-
-td.BID{
-  margin: 0;
-  padding: 0;
-  width: 1%;
-  float: right;
-}
-tr.Buser, tr.Btitle, tr.Btype, tr.Btags, tr.Bdate{
-  float: left;
+  /* box-sizing: border-box; */
 }
 .BlogPostz{
-
-}
-
-.Buser  {
   margin: 0;
   padding: 0;
   position: relative;
+  display: block;
 }
-td{
-  margin: 0;
-  padding: 0;
-  position: relative;
+tr{
+  overflow: none;
+  text-align: inherit;
+}
+tr.BID{
+  float: right;
+  display: block;
+  border: 2px solid #fff !important;
+}
+tr.Buser, tr.Btitle, tr.Btype, tr.Btags, tr.Bdate{
+  /* border: 2px solid #fff !important; */
+  float: left;
+  text-align: left;
+}
+tr.Btitle{
+  float: left!important;
+  font-size: 150%;
+  padding-top: 22px;
+  margin-left: -84px;
+}
+tr.Bdate{
+  width: inherit;
+  padding-right: 10%;
 }

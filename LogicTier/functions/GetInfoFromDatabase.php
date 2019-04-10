@@ -36,17 +36,18 @@ $sec = "2";
                     <input type="submit" value="Submit" id="send"></li>
                 </ol>
             </form>
-    </div>
+    </div><br />
     <div id="BlogTable">
-        <table id="BlogPostz">
+        
         <?php 
         while($row = $stmt->fetch()){
+            echo "<table id='BlogPostz'>";
             echo "&nbsp;<tr class='BID'><td>".$row["blogID"]."</td></tr>";
-            echo "<tr class='Buser'><th>Made by:</th><td>".$row["userID"]."</td></tr>";
-            echo "<tr class='Btitle'><td>".$row["blogTitle"]."</td></tr>";
+            echo "<tr class='Buser'><th>Made by:</th><td>".$row["userID"]."</td></tr><br />";
+            echo "<tr class='Btitle'><td><b>".$row["blogTitle"]."</b></td></tr>";
             echo "<tr class='Btext'><td>".$row["blogText"]."</td></tr>";
             echo "<tr class='Btags'><th>Blog Tags:</th><td>".$row["blogTags"]."</td></tr>";
-            echo "<tr class='Btype'><th>Blog typen:</th><td>".$row["blogType"]."</td></tr>";
+            echo "<tr class='Btype'><th>Blog typen:</th><td>".$row["blogType"]."<br /></td></tr>";
             echo "<tr class='Bdate'><th>Datum van publicatie:</th><td>".$row["blogDate"]."</td></tr>&nbsp;";
             //echo "<tr class='Bbutton'><td><button class='button' style='vertical-align:middle' onclick='window.location.href=`KlantenDetails.php?id=$id`'>Details</button></td></tr>";
         }
