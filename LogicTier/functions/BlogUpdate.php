@@ -1,4 +1,8 @@
-<?php include_once './ConnectDatabase.php'; ?>
+<?php include_once './ConnectDatabase.php'; 
+$id = $_GET['id'];
+$title = $_GET['blogTitle'];
+$inhoud = $_GET['blogText'];
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -10,17 +14,30 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Blog update JP</title>
 </head>
-<body>
+    <body>
 
+        <form action="" method="GET" id="editform">
+            <div class="ButtonGroup">
+                <input id="UpdateButton" type="submit" name="submit" value="update"/>
+                <button id="TerugButton" type="submit" formaction="index.php">Terug</button>
+            </div>
+                <input type = "hidden" name = "id" value="<?php echo $_GET['id']; ?>" />
+                <label for="title">Title</label><br>
+                <input type="text" name="title" value="<?php echo $_GET['blogTitle']; ?>"><br>
+                <label for="inhoud">Bericht</label>
+                <textarea id="TextareaInhoud2" rows="4" cols="50" name="inhoud"><?php echo $_GET['blogText']; ?></textarea>
+        </form>
 
-<table class="EduchainTable">
+        
+    </body>
+</html>
+
 <?php
 
-$id = $_GET['id'];
-
-$stmt = $db_conn->prepare("SELECT * FROM blogposts WHERE blogID = $id");
-$stmt->execute();
-    
+if($_GET['submit']) {
+    $stmt = $db_conn->prepare("UPDATE posts SET title='$title' , inhoud='$inhoud' WHERE id='$id'");
+    $stmt->execute();
+}
     while($row = $stmt->fetch()){
     
     echo "<tr><th></th><td rowspan='2'><button class='button' style='vertical-align:middle' 
@@ -32,6 +49,4 @@ $stmt->execute();
     echo "</table>";
     ?>
 
-    
-</body>
-</html>
+

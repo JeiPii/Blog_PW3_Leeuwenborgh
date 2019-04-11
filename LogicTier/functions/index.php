@@ -1,15 +1,15 @@
-<?php require_once './ConnectDatabase.php'; ?> 
-<?php
-error_reporting(0);
-$page = $_SERVER['PHP_SELF'];
-$sec = "2";
+<?php require_once './ConnectDatabase.php'; 
+
+error_reporting(1);
+// $page = $_SERVER['PHP_SELF'];
+// $sec = "2";
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <head> 
     <?php   
     
-    $stmt = $db_conn->prepare("SELECT * FROM blogposts"); //WHERE blogID = $id
+    $stmt = $db_conn->prepare("SELECT * FROM blogPosts"); //WHERE blogID = $id
     $stmt->execute();?>
     <!-- <meta http-equiv="refresh" content="<?php echo $sec?>;URL='<?php echo $page?>'"> -->
     <meta charset="UTF-8">

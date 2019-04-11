@@ -2,7 +2,7 @@
 $servername = "localhost";
 $username = "Webserver";
 $password = "dD25CpeSUEwe";
-$dbName = "blogjp"; //TODO: Change to blogJP when pushing to main
+$dbName = "blogJP"; //TODO: Change to blogJP when pushing to main
 try {
     $db_conn = new PDO("mysql:host=$servername;dbname=$dbName", $username, $password);
     // set the PDO error mode to exception
