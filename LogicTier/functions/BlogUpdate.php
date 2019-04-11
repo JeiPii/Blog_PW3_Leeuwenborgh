@@ -33,9 +33,12 @@ $inhoud = $_GET['blogText'];
 </html>
 
 <?php
+$id = $_GET['id'];
+$title = $_GET['blogTitle'];
+$inhoud = $_GET['blogText'];
 
 if($_GET['submit']) {
-    $stmt = $db_conn->prepare("UPDATE posts SET title='$title' , inhoud='$inhoud' WHERE id='$id'");
+    $stmt = $db_conn->prepare("UPDATE blogPosts SET blogTitle='$title' , blogText='$inhoud' WHERE blogID='$id'");
     $stmt->execute();
 }
     while($row = $stmt->fetch()){

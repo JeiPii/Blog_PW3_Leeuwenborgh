@@ -1,6 +1,7 @@
 <?php require_once './ConnectDatabase.php'; 
 
 error_reporting(1);
+
 // $page = $_SERVER['PHP_SELF'];
 // $sec = "2";
 ?>
@@ -44,7 +45,9 @@ error_reporting(1);
         <?php 
         while($row = $stmt->fetch()){
             $id = $row["blogID"];
-            
+            $title = $row['blogTitle'];
+            $inhoud = $row['blogText'];
+
             echo "<table id='BlogPostz'>";
             echo "&nbsp;<tr class='BID'><td>".$row["blogID"]."</td></tr>";
             echo "<tr class='Buser'><th>Made by:</th><td>".$row["userID"]."</td></tr><br />";
@@ -53,11 +56,13 @@ error_reporting(1);
             echo "<tr class='Btags'><th>Blog Tags:</th><td>".$row["blogTags"]."</td></tr>";
             echo "<tr class='Btype'><th>Blog typen:</th><td>".$row["blogType"]."<br /></td></tr>";
             echo "<tr class='Bdate'><th>Datum van publicatie:</th><td>".$row["blogDate"]."</td></tr>&nbsp;";
-            echo "<tr class='Bbutton'><td><button id='Bbutton' style='vertical-align:middle' onclick='window.location.href=`BlogUpdate.php?id=$id`'>Update Post</button></td></tr>";
+            echo "<tr class='Bbutton'><td><button id='Bbutton' style='vertical-align:middle' onclick='window.location.href=`BlogUpdate.php?id=$id&title=$title&inhoud=$inhoud`'>Update Post</button></td></tr>";
             echo "<tr class='Bbutton'><td><button id='Bbutton' style='vertical-align:middle' onclick='window.location.href=`BlogDel.php?id=$id`'>Delete Post</button></td></tr>";
         }
             echo"</table>"; 
             $id = $_GET['id'];
+            $title = $_GET['blogTitle'];
+            $inhoud = $_GET['blogText'];
         ?>
     </div>
 </body>
