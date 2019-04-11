@@ -26,7 +26,7 @@ error_reporting(1);
     <button onclick="OneHidyBoy()"id="addPost">Add Blog Post</button>
     <div id="customerFormComplete">
         <h1>Customer Form </h1>
-            <form action="../LogicTier/functions/FormToDatabase.php" method="POST" id="formInput">
+            <form action="FormToDatabase.php" method="POST" id="formInput">
                 <ol> <li>
                     <label for="title">Titel:</label>
                     <input type="text" name="BlogTitle">
@@ -60,9 +60,6 @@ error_reporting(1);
             echo "<tr class='Bbutton'><td><button id='Bbutton' style='vertical-align:middle' onclick='window.location.href=`BlogDel.php?id=$id`'>Delete Post</button></td></tr>";
         }
             echo"</table>"; 
-            $id = $_GET['id'];
-            $title = $_GET['blogTitle'];
-            $inhoud = $_GET['blogText'];
         ?>
     </div>
 </body>
