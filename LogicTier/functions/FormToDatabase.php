@@ -8,9 +8,9 @@
         $type = $_POST["BlogType"];
 
 try {   
-        require_once './connectDatabase.php';
+        require_once './ConnectDatabase.php';
 
-        $sql = "INSERT INTO `blogposts` (`blogID`, `userID`, `blogTitle`, `blogText`, `blogTags`, `blogType`, `blogDate`) VALUES (NULL, NULL, '$title', '$text', '$tags', '$type', CURRENT_TIMESTAMP);";
+        $sql = "INSERT INTO `blogPosts` (`blogID`, `userID`, `blogTitle`, `blogText`, `blogTags`, `blogType`, `blogDate`) VALUES (NULL, NULL, '$title', '$text', '$tags', '$type', CURRENT_TIMESTAMP);";
             if ($db_conn->query($sql))
         {
             echo "<script type= 'text/javascript'>console.log('New Record Inserted Successfully');</script>";

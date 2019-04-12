@@ -3,7 +3,7 @@
     <?php
         $id = $_GET['id'];
         // sql to delete a record
-        $sql = "DELETE FROM `blogposts` WHERE `blogposts`.`blogID` = $id";
+        $sql = "DELETE FROM `blogPosts` WHERE `blogPosts`.`blogID` = $id";
 
         // use exec() because no results are returned
         $db_conn->exec($sql);

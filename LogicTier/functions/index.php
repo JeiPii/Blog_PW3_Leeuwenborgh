@@ -1,4 +1,4 @@
-<?php require_once './ConnectDatabase.php'; 
+<?php require_once ('./ConnectDatabase.php'); 
 
 error_reporting(1);
 

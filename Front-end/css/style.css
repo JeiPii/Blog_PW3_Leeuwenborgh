@@ -6,7 +6,31 @@ body{
   padding: 0px;
   margin: 0px;
   color: #fff;
+  
+  background: linear-gradient(312deg, #2a1c3a, #5816a5);
+  background-size: 400% 400%;
+  
+  -webkit-animation: AnimationName 15s ease infinite;
+  -moz-animation: AnimationName 15s ease infinite;
+  animation: AnimationName 15s ease infinite;
+  
+  @-webkit-keyframes AnimationName {
+      0%{background-position:0% 84%}
+      50%{background-position:100% 17%}
+      100%{background-position:0% 84%}
+  }
+  @-moz-keyframes AnimationName {
+      0%{background-position:0% 84%}
+      50%{background-position:100% 17%}
+      100%{background-position:0% 84%}
+  }
+  @keyframes AnimationName {
+      0%{background-position:0% 84%}
+      50%{background-position:100% 17%}
+      100%{background-position:0% 84%}
+  }
 }
+
 input {
   width: 100%;
   padding: 7px 20px;
@@ -18,9 +42,6 @@ input {
   -webkit-appearance: none !important;  
   -moz-appearance: none !important;
   appearance: none !important
-}
-body {
-  background-color: #2a1c3a;
 }
 h1{
   text-align: center;
@@ -96,9 +117,9 @@ button#addPost:hover {
   top: 25px;
   width: 284px;
   color: rgb(255, 255, 255);
-  background: -webkit-linear-gradient(50deg,#ff6ec4,#7873f5) !important;
-  background: -o-linear-gradient(50deg,#ff6ec4,#7873f5) !important;
-  background: linear-gradient(40deg,#ff6ec4,#7873f5) !important;
+  background: transparent!important;
+  border: 2px solid #fff !important;
+  border-radius: 25px;
 }
 #send {
   background-color: rgb(115, 28, 196);
@@ -115,6 +136,50 @@ button#addPost:hover {
   background-color: transparent !important;
   color: #fff !important;
 }
+#TextareaInhoud2{
+  padding: 7px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 2px solid #fff !important;
+  border-radius: 25px;
+  outline: none !important;
+  -webkit-appearance: none !important;
+  -moz-appearance: none !important;
+  appearance: none !important;
+  width: 30%;
+}
+form#editform label{
+  font-size: 25px;
+  font-weight: bold;
+}
+.UpdateDiv{
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  display: inline-block;
+  width: 60%;
+  object-fit: contain;
+  padding-top: 40px;
+padding-left: 36px;
+
+}
+#UpdateButton, #TerugButton, #Bbutton{
+  width: 15%!important;
+  padding: 7px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 2px solid #fff !important;
+  border-radius: 25px;
+  outline: none !important;
+  -webkit-appearance: none !important;
+  -moz-appearance: none !important;
+  appearance: none !important;
+}
+#InputFieldTitle{
+  width: 30%!important;
+
+}
+
 form#formInput li {
   list-style-type: none;
   padding: 5px;
@@ -124,6 +189,7 @@ form#formInput label{
   display: inline-block;
   line-height: 1.8;
   vertical-align: top;
+  font-size:15px;
   width: 120px; /* Width of labels */
 }
 form#formInput ol{

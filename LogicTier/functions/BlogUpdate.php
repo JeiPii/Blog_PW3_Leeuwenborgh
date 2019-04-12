@@ -16,20 +16,20 @@ $inhoud = $_GET['inhoud'];
     <title>Blog update JP</title>
 </head>
     <body>
-
-        <form action="" method="GET" id="editform">
-            <div class="ButtonGroup">
-                <input id="UpdateButton" type="submit" name="submit" value="update"/>
-                <button id="TerugButton" type="submit" formaction="index.php">Terug</button>
-            </div>
-                <input type = "hidden" name = "id" value="<?php echo $_GET['id']; ?>" />
-                <label for="title">Title</label><br>
-                <input type="text" name="title" value="<?php echo $_GET['title']; ?>"><br>
-                <label for="inhoud">Bericht</label>
-                <textarea id="TextareaInhoud2" rows="4" cols="50" name="inhoud"><?php echo $_GET['inhoud']; ?></textarea>
-        </form>
-
-        
+        <div class="UpdateDiv">
+            <form action="" method="GET" id="editform">
+                    <input type = "hidden" name = "id" value="<?php echo $_GET['id']; ?>" />
+                    <label for="TitleMessage">Title:</label><br />
+                    <input type="text" id="InputFieldTitle" name="title" value="<?php echo $_GET['title']; ?>"><br />
+                    <label for="InhoudMessage">Bericht:</label><br />
+                    <textarea id="TextareaInhoud2" rows="4" cols="50" name="inhoud"><?php echo $_GET['inhoud']; ?></textarea>
+                    
+                    <div class="ButtonGroup">
+                    <input id="UpdateButton" type="submit" name="update" value="update"/>
+                    <button id="TerugButton" type="submit" name="update" formaction="index.php">Terug</button>
+                    </div>
+            </form>
+        </div>
     </body>
 </html>
 
@@ -41,7 +41,7 @@ if($_GET['submit']) {
     $title = $_GET['title'];
     $inhoud = $_GET['inhoud'];
 
-    $stmt = $db_conn->prepare("UPDATE `blogposts` SET `blogTitle` = '$title', `blogText` = '$inhoud' WHERE `blogposts`.`blogID` = $id "); 
+    $stmt = $db_conn->prepare("UPDATE `blogPosts` SET `blogTitle` = '$title', `blogText` = '$inhoud' WHERE `blogPosts`.`blogID` = $id "); 
     $stmt->execute();
     function Redirect($url, $permanent = false)
     {
